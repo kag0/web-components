@@ -22,57 +22,58 @@ sidebarComponentTemplate.innerHTML =
 	<div id="right"><slot name="right"></slot></div>
 </div>`
 
-customElements.define('sidebar-component',
-	class extends HTMLElement {
-		static get observedAttributes() {
-			return ['collapsed', 'side', 'width'];
-		}
 
-		constructor() {
-			super();
-			var template = sidebarComponentTemplate.content;
-			const shadowRoot = this
-				.attachShadow({mode: 'open'})
-				.appendChild(template.cloneNode(true));
-			this.refresh();
-		}
-	
-		refresh() {
-			this.side(this.getAttribute("side"));
-			this.width = this.getAttribute("width");
-			this.collapsed = this.getAttribute("collapsed");
-		}
+class SidebarComponent extends HTMLElement {
+	static get observedAttributes() {
+		return ['collapsed', 'side', 'width'];
+	}
 
-		set collapsed(value) {
-			if(value === true || value === "" || value === "true") {
-				this.sidebar.style.minWidth = 0;
-				this.sidebar.style.width = 0;
-			} else {
-				this.sidebar.style.minWidth = this.getAttribute("width");
-			}
-		}
+	constructor() {
+		super();
+		var template = sidebarComponentTemplate.content;
+		const shadowRoot = this
+			.attachShadow({mode: 'open'})
+			.appendChild(template.cloneNode(true));
+		this.refresh();
+	}
 
-		side(value) {
-			switch(value) {
-				case "right": 
-					this.sidebar = this.shadowRoot.getElementById("right");
-					this.mainContent = this.shadowRoot.getElementById("left");
-					break;
-				default:
-					this.sidebar = this.shadowRoot.getElementById("left");
-					this.mainContent = this.shadowRoot.getElementById("right");
-			}
+	refresh() {
+		this.side(this.getAttribute("side"));
+		this.width = this.getAttribute("width");
+		this.collapsed = this.getAttribute("collapsed");
+	}
 
-			this.sidebar.className = "sidebar";
-			this.mainContent.className = "main-content";
-		}
-
-		set width(value) {
-			if(value !== "" && value != null) {
-				this.sidebar.style.minWidth = value;
-			} else {
-				this.sidebar.style.minWidth = "250px";
-			}
+	set collapsed(value) {
+		if(value === true || value === "" || value === "true") {
+			this.sidebar.style.minWidth = 0;
+			this.sidebar.style.width = 0;
+		} else {
+			this.sidebar.style.minWidth = this.getAttribute("width");
 		}
 	}
-);
+
+	side(value) {
+		switch(value) {
+			case "right": 
+				this.sidebar = this.shadowRoot.getElementById("right");
+				this.mainContent = this.shadowRoot.getElementById("left");
+				break;
+			default:
+				this.sidebar = this.shadowRoot.getElementById("left");
+				this.mainContent = this.shadowRoot.getElementById("right");
+		}
+
+		this.sidebar.className = "sidebar";
+		this.mainContent.className = "main-content";
+	}
+
+	set width(value) {
+		if(value !== "" && value != null) {
+			this.sidebar.style.minWidth = value;
+		} else {
+			this.sidebar.style.minWidth = "250px";
+		}
+	}
+}
+
+customElements.define('sidebar-component', SidebarComponent);
