@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body style="margin: 0;">
+
+	<sidebar-component id="leftbar" side="left" collapsed=false width="300px">
+
+		<div slot="left" style="background-color: dodgerblue; height: 100%;">
+			<a href="#" onclick="onCloseLeft()">close left bar</a>
+			<br>
+			left
+		</div>
+
+		<div slot="right">
+			<sidebar-component id="rightbar" side="right">
+
+				<div slot="left" style="background-color: orangered;">
+					<a href="#" onclick="onOpenLeft()">open left bar</a>
+					<br>
+					center
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					bottom
+				</div>
+
+				<div slot="right" style="background-color: greenyellow;">
+					bars can be added on either side or nested.
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					bars also scroll
+				</div>
+
+			</sidebar-component>
+		</div>
+	</sidebar-component>
+
+	</body>
+	<script src="sidebar.js" defer></script>
+	<script>
+		function onOpenLeft() {
+			document.getElementById("leftbar").collapsed = false;
+		}
+		function onCloseLeft() {
+			document.getElementById("leftbar").collapsed = true;
+		}
+	</script>
+</body>
+</html>
