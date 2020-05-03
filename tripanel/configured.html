@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+		.navlist {
+			display: flex;
+			flex-direction: column;
+			box-shadow: 1px 0 5px black;
+			margin-right: 10px;
+			height: 100%;
+		}
+		.navitem {
+			padding: 1em 1em 1em 1em;
+			font-size: large;
+		}
+		.navitem:hover {
+			background-color: aliceblue;
+		}
+		.reslist {
+			display: flex;
+			flex-direction: column;
+		}
+		.listitem {
+			padding: 1em 1em 1em 1em;
+			font-size: large;
+			border-width: 0 0 2px 0;
+			border-style: solid;
+		}
+		.listitem:hover {
+			background-color: aliceblue;
+		}
+		.resdetail {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+		@media (min-width: 500px) {
+			.resdetail {
+				max-width: 50vw;
+			}
+		}
+	</style>
+</head>
+<body style="margin: 0;">
+	<tripanel-component id='tripanel' detailsCollapsed="true">
+		<div slot="navigation-drawer" class="navlist">
+			<div class="navitem">Inbox</div>
+			<div class="navitem">Sent Mail</div>
+			<div class="navitem">Trash</div>
+		</div>
+		<div slot="resource-list" class="reslist">
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+			<div class="listitem"><b>Some email subject</b> from <em>someone@example.com</em></div>
+		</div>
+		<div slot="resource-details" class="resdetail">
+			<h1>Some email subject</h1>
+			<h4>from <em>someone@example.com</em></h4>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae diam bibendum erat consequat ultrices. Donec in porttitor mi. Morbi blandit, mi at facilisis egestas, libero velit lobortis dui, vitae viverra lectus enim sit amet eros. Pellentesque quis leo vitae arcu sodales posuere eget ac dui. Praesent tempus libero eu euismod dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nibh velit, pulvinar a porta a, placerat in ex. Fusce rhoncus orci sed vestibulum tincidunt. In dui tellus, pellentesque lobortis augue sed, molestie suscipit augue. Vestibulum dignissim hendrerit est, quis tristique quam gravida sit amet. Vestibulum nisi massa, rutrum eu orci gravida, porttitor luctus libero.
+			</p>
+			<p>
+			Nullam ultrices lorem non aliquam condimentum. Sed suscipit viverra porta. Aliquam ultricies elementum nibh ut cursus. Donec vestibulum vitae turpis eu tincidunt. Aenean vestibulum suscipit urna, a pellentesque magna convallis a. Morbi maximus porttitor diam in rutrum. Phasellus faucibus et velit scelerisque malesuada. Aenean posuere leo eros, sed facilisis ligula dapibus quis. In vel scelerisque odio, non vehicula ipsum. Quisque a tempor urna, sit amet sagittis nunc. Phasellus sed libero tincidunt ligula aliquam aliquam. Pellentesque nec semper nunc.
+			</p>
+			<p>
+			Donec eget sem sed risus dictum elementum. Cras tincidunt pharetra augue, sed lacinia nibh gravida a. Quisque luctus odio eget urna blandit luctus. Donec dictum vestibulum sapien, quis luctus dolor dignissim eu. Nunc posuere luctus lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt ullamcorper iaculis. Vestibulum commodo neque sit amet urna consequat imperdiet. Quisque tristique ultrices quam consectetur pellentesque. Nullam placerat euismod purus sed luctus. Nunc porttitor dui sed sem venenatis condimentum.
+			</p>
+			<p>
+			Etiam eget molestie ex, id fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc volutpat, mi eu mollis consectetur, sapien turpis condimentum eros, in sollicitudin odio sapien sit amet quam. Suspendisse ultricies tellus et ligula aliquet, ultrices porta augue convallis. Mauris blandit turpis vitae neque commodo, id feugiat arcu ornare. Pellentesque hendrerit ligula non ante pharetra, in lobortis sapien pharetra. Pellentesque eu consequat odio. Donec ut tellus nec nibh pretium facilisis. Vivamus semper ut turpis ac fermentum. Vivamus pellentesque, nunc ac volutpat condimentum, urna lectus vestibulum turpis, ac dapibus ante risus in ipsum. Sed venenatis enim ac ultrices cursus. Nam risus tellus, interdum quis leo in, euismod dignissim elit. Vestibulum ultrices consequat euismod. Mauris rhoncus cursus enim, vitae consectetur libero tincidunt vel. Aenean malesuada libero elit, id tempus nulla eleifend nec.
+			</p>
+			<p>
+			Nam pulvinar erat felis, nec bibendum dolor sagittis eu. In ac porta augue, in blandit erat. Vivamus sed porttitor felis, quis aliquam leo. Praesent porta nunc egestas iaculis porta. Morbi fringilla rutrum varius. Fusce mollis ut nisl id ultrices. Duis eu est erat. Praesent rhoncus accumsan condimentum. In hac habitasse platea dictumst. Nullam magna felis, mollis at nisi id, tempus pellentesque quam. Vestibulum dignissim arcu sapien, nec commodo quam auctor at. Sed quam risus, volutpat sit amet efficitur vel, fermentum non turpis. Praesent congue, libero at egestas vestibulum, diam orci euismod enim, a feugiat tortor enim non massa. Mauris ultrices, purus sit amet fringilla pellentesque, neque justo ultrices ante, quis suscipit diam ipsum id nulla. Curabitur rutrum nisl porta fringilla vehicula. 
+			</p>
+		</div>
+	</tripanel-component>
+
+</body>
+<script type="module" src="tripanel.js" defer></script>
+<script>
+	let items = document.querySelectorAll(".listitem")
+	items.forEach(i => i.onclick = () => document.getElementById("tripanel").detailsCollapsed = false);
+</script>
+</html>

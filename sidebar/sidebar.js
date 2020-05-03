@@ -10,6 +10,7 @@ sidebarComponentTemplate.innerHTML =
 		transition: 0.5s;
 		min-width: 250px;
 		overflow: auto;
+		flex-shrink: 0;
 	}
 	.main-content {
 		width: 100%;
@@ -31,7 +32,7 @@ class SidebarComponent extends HTMLElement {
 	constructor() {
 		super();
 		var template = sidebarComponentTemplate.content;
-		const shadowRoot = this
+		this
 			.attachShadow({mode: 'open'})
 			.appendChild(template.cloneNode(true));
 		this.refresh();
@@ -43,13 +44,24 @@ class SidebarComponent extends HTMLElement {
 		this.collapsed = this.getAttribute("collapsed");
 	}
 
+	truthy(value) {
+		return value === true || value === "" || value === "true";
+	}
+
 	set collapsed(value) {
-		if(value === true || value === "" || value === "true") {
+		if(this.truthy(value)) {
 			this.sidebar.style.minWidth = 0;
 			this.sidebar.style.width = 0;
+			this.collapsed_value = true;
 		} else {
-			this.sidebar.style.minWidth = this.getAttribute("width");
+			this.sidebar.style.minWidth = this.width;
+			this.collapsed_value = false;
+			this.sidebar.style.width = '';
 		}
+	}
+
+	toggleCollapsed() {
+		this.collapsed = !this.collapsed_value;
 	}
 
 	side(value) {
@@ -72,6 +84,14 @@ class SidebarComponent extends HTMLElement {
 			this.sidebar.style.minWidth = value;
 		} else {
 			this.sidebar.style.minWidth = "250px";
+		}
+	}
+
+	get width() {
+		if(this.hasAttribute("width")) {
+			return this.getAttribute("width");
+		} else {
+			return "250px";
 		}
 	}
 }
