@@ -18,3 +18,4 @@ or in html
 ## Components
 
 ### [Sidebar](sidebar)
+### [Tripanel](tripanel)
